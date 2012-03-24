@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffff99"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <TableLayout style="@style/EstiloTabla" >
+
+        <TableRow style="@style/EstiloFila" >
+
+            <TextView
+                style="@style/EstiloTitulo"
+                android:layout_column="1"
+                android:text="@string/jugador1" />
+
+            <TextView
+                style="@style/EstiloColor"
+                android:layout_column="2"
+                android:background="#ff5555" />
+
+            <TextView
+                style="@style/EstiloColor"
+                android:layout_column="3"
+                android:background="#55ff55" />
+
+            <TextView
+                style="@style/EstiloColor"
+                android:layout_column="4"
+                android:background="#dddddd" />
+
+            <TextView
+                style="@style/EstiloColor"
+                android:layout_column="5"
+                android:background="#5555ff" />
+
+            <TextView
+                style="@style/EstiloColor"
+                android:layout_column="6"
+                android:background="#ffff55" />
+        </TableRow>
+
+        <TableRow style="@style/EstiloFila" >
+
+            <TextView
+                style="@style/EstiloTitulo"
+                android:layout_column="1"
+                android:text="@string/ronda1" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="2" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="3" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="4" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="5" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="6" />
+
+            <TextView
+                android:id="@+id/j1r1"
+                style="@style/EstiloCelda.totalRonda"
+                android:layout_column="7" />
+        </TableRow>
+
+        <TableRow style="@style/EstiloFila" >
+
+            <TextView
+                style="@style/EstiloTitulo"
+                android:layout_column="1"
+                android:text="@string/ronda2" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="2" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="3" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="4" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="5" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="6" />
+
+            <TextView
+                android:id="@+id/j1r2"
+                style="@style/EstiloCelda.totalRonda"
+                android:layout_column="7" />
+        </TableRow>
+
+        <TableRow style="@style/EstiloFila" >
+
+            <TextView
+                style="@style/EstiloTitulo"
+                android:layout_column="1"
+                android:text="@string/ronda3" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="2" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="3" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="4" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="5" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="6" />
+
+            <TextView
+                android:id="@+id/j1r3"
+                style="@style/EstiloCelda.totalRonda"
+                android:layout_column="7" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textColor="#000000"
+            android:text="@string/total" />
+
+        <TextView
+            android:id="@+id/totalj1"
+            style="@style/EstiloTotalJugador" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="10dp"
+        android:background="#aaaaaa" />
+
+    <TableLayout style="@style/EstiloTabla" >
+
+        <TableRow style="@style/EstiloFila" >
+
+            <TextView
+                style="@style/EstiloTitulo"
+                android:layout_column="1"
+                android:text="@string/jugador2" />
+
+            <TextView
+                style="@style/EstiloColor"
+                android:layout_column="2"
+                android:background="#ff5555" />
+
+            <TextView
+                style="@style/EstiloColor"
+                android:layout_column="3"
+                android:background="#55ff55" />
+
+            <TextView
+                style="@style/EstiloColor"
+                android:layout_column="4"
+                android:background="#dddddd" />
+
+            <TextView
+                style="@style/EstiloColor"
+                android:layout_column="5"
+                android:background="#5555ff" />
+
+            <TextView
+                style="@style/EstiloColor"
+                android:layout_column="6"
+                android:background="#ffff55" />
+        </TableRow>
+
+        <TableRow style="@style/EstiloFila" >
+
+            <TextView
+                style="@style/EstiloTitulo"
+                android:layout_column="1"
+                android:text="@string/ronda1" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="2" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="3" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="4" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="5" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="6" />
+
+            <TextView
+                android:id="@+id/j2r1"
+                style="@style/EstiloCelda.totalRonda"
+                android:layout_column="7" />
+        </TableRow>
+
+        <TableRow style="@style/EstiloFila" >
+
+            <TextView
+                style="@style/EstiloTitulo"
+                android:layout_column="1"
+                android:text="@string/ronda2" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="2" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="3" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="4" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="5" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="6" />
+
+            <TextView
+                android:id="@+id/j2r2"
+                style="@style/EstiloCelda.totalRonda"
+                android:layout_column="7" />
+        </TableRow>
+
+        <TableRow style="@style/EstiloFila" >
+
+            <TextView
+                style="@style/EstiloTitulo"
+                android:layout_column="1"
+                android:text="@string/ronda3" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="2" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="3" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="4" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="5" />
+
+            <TextView
+                style="@style/EstiloCelda"
+                android:layout_column="6" />
+
+            <TextView
+                android:id="@+id/j2r3"
+                style="@style/EstiloCelda.totalRonda"
+                android:layout_column="7" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textColor="#000000"
+            android:text="@string/total" />
+
+        <TextView
+            android:id="@+id/totalj2"
+            style="@style/EstiloTotalJugador" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="10dp"
+        android:background="#aaaaaa" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textColor="#000000"
+            android:text="@string/ganador" />
+
+        <TextView
+            android:id="@+id/empate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="@string/empate" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Contador Perdidos</string>
+
+    <string name="jugador1">Jugador 1</string>
+    <string name="jugador2">Jugador 2</string>
+    <string name="ronda1">Ronda 1</string>
+    <string name="ronda2">Ronda 2</string>
+    <string name="ronda3">Ronda 3</string>
+    <string name="ganador">Ganador</string>
+    <string name="empate">EMPATE</string>
+    <string name="total">TOTAL</string>
+    <string name="valorInicial">0</string>
+</resources>
