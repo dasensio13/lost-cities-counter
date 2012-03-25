@@ -48,24 +48,25 @@
                 android:layout_column="1"
                 android:text="@string/ronda1" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
+                android:inputType="numberSigned"
                 android:layout_column="2" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="3" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="4" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="5" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="6" />
 
             <TextView
@@ -81,24 +82,24 @@
                 android:layout_column="1"
                 android:text="@string/ronda2" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="2" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="3" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="4" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="5" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="6" />
 
             <TextView
@@ -114,24 +115,24 @@
                 android:layout_column="1"
                 android:text="@string/ronda3" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="2" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="3" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="4" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="5" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="6" />
 
             <TextView
@@ -207,24 +208,24 @@
                 android:layout_column="1"
                 android:text="@string/ronda1" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="2" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="3" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="4" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="5" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="6" />
 
             <TextView
@@ -240,24 +241,24 @@
                 android:layout_column="1"
                 android:text="@string/ronda2" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="2" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="3" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="4" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="5" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="6" />
 
             <TextView
@@ -273,24 +274,24 @@
                 android:layout_column="1"
                 android:text="@string/ronda3" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="2" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="3" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="4" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="5" />
 
-            <TextView
-                style="@style/EstiloCelda"
+            <EditText
+                style="@style/EstiloInput"
                 android:layout_column="6" />
 
             <TextView
@@ -335,7 +336,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:textColor="#000000"
-            android:text="@string/ganador" />
+            android:text="@string/gana" />
 
         <TextView
             android:id="@+id/empate"
@@ -343,6 +344,12 @@
             android:layout_height="wrap_content"
             android:textColor="#000000"
             android:text="@string/empate" />
+
+        <Button android:id="@+id/calcular"
+            android:layout_marginLeft="60dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/calcular"/>
     </LinearLayout>
 
 </LinearLayout>
