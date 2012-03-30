@@ -46,6 +46,7 @@
             <EditText
                 style="@style/EstiloInput"
                 android:id="@+id/j1r1c1"
+                android:text="99"
                 android:layout_column="2" />
             <EditText
                 style="@style/EstiloInput"

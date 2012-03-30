@@ -13,7 +13,7 @@
     android:orientation="horizontal"
     android:padding="2dp" >
 
-	    <TableLayout style="@style/EstiloTabla.landscape" >
+	    <TableLayout style="@style/EstiloTabla.landscape">
 	        <TableRow style="@style/EstiloFila" >
 	            <TextView
 	                style="@style/EstiloTitulo.landscape"
