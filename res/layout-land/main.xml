@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffff99"
+    android:orientation="vertical"
+    android:padding="2dp" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffff99"
+    android:orientation="horizontal"
+    android:padding="2dp" >
+
+	    <TableLayout style="@style/EstiloTabla.landscape" >
+	        <TableRow style="@style/EstiloFila" >
+	            <TextView
+	                style="@style/EstiloTitulo.landscape"
+	                android:layout_column="1"
+	                android:text="@string/jugador1" />
+	            <TextView
+	                style="@style/EstiloColor"
+	                android:layout_column="2"
+	                android:background="#ff5555" />
+	            <TextView
+	                style="@style/EstiloColor"
+	                android:layout_column="3"
+	                android:background="#55ff55" />
+	            <TextView
+	                style="@style/EstiloColor"
+	                android:layout_column="4"
+	                android:background="#dddddd" />
+	            <TextView
+	                style="@style/EstiloColor"
+	                android:layout_column="5"
+	                android:background="#5555ff" />
+	            <TextView
+	                style="@style/EstiloColor"
+	                android:layout_column="6"
+	                android:background="#ffff55" />
+		        <TextView
+		            android:id="@+id/totalj1"
+		            style="@style/EstiloCelda.totalRonda.landscape"
+		            android:layout_column="7" />
+	        </TableRow>
+	
+	        <TableRow style="@style/EstiloFila" >
+	            <TextView
+	                style="@style/EstiloTitulo.landscape"
+	                android:layout_column="1"
+	                android:text="@string/ronda1" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r1c1"
+	                android:layout_column="2" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r1c2"
+	                android:layout_column="3" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r1c3"
+	                android:layout_column="4" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r1c4"
+	                android:layout_column="5" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r1c5"
+	                android:layout_column="6" />
+	            <TextView
+	                android:id="@+id/j1r1"
+	                style="@style/EstiloCelda.totalRonda.landscape"
+	                android:layout_column="7" />
+	        </TableRow>
+	
+	        <TableRow style="@style/EstiloFila" >
+	            <TextView
+	                style="@style/EstiloTitulo.landscape"
+	                android:layout_column="1"
+	                android:text="@string/ronda2" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r2c1"
+	                android:layout_column="2" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r2c2"
+	                android:layout_column="3" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r2c3"
+	                android:layout_column="4" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r2c4"
+	                android:layout_column="5" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r2c5"
+	                android:layout_column="6" />
+	            <TextView
+	                android:id="@+id/j1r2"
+	                style="@style/EstiloCelda.totalRonda.landscape"
+	                android:layout_column="7" />
+	        </TableRow>
+	
+	        <TableRow style="@style/EstiloFila" >
+	            <TextView
+	                style="@style/EstiloTitulo.landscape"
+	                android:layout_column="1"
+	                android:text="@string/ronda3" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r3c1"
+	                android:layout_column="2" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r3c2"
+	                android:layout_column="3" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r3c3"
+	                android:layout_column="4" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r3c4"
+	                android:layout_column="5" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j1r3c5"
+	                android:layout_column="6" />
+	            <TextView
+	                android:id="@+id/j1r3"
+	                style="@style/EstiloCelda.totalRonda.landscape"
+	                android:layout_column="7" />
+	        </TableRow>
+	    </TableLayout>    
+
+	    <View
+	        android:layout_width="2dp"
+	        android:layout_height="fill_parent"
+	        android:background="#aaaaaa" />
+
+	    <TableLayout style="@style/EstiloTabla.landscape" >
+	        <TableRow style="@style/EstiloFila" >
+	            <TextView
+	                style="@style/EstiloTitulo.landscape"
+	                android:layout_column="1"
+	                android:text="@string/jugador2" />
+	            <TextView
+	                style="@style/EstiloColor"
+	                android:layout_column="2"
+	                android:background="#ff5555" />
+	            <TextView
+	                style="@style/EstiloColor"
+	                android:layout_column="3"
+	                android:background="#55ff55" />
+	            <TextView
+	                style="@style/EstiloColor"
+	                android:layout_column="4"
+	                android:background="#dddddd" />
+	            <TextView
+	                style="@style/EstiloColor"
+	                android:layout_column="5"
+	                android:background="#5555ff" />
+	            <TextView
+	                style="@style/EstiloColor"
+	                android:layout_column="6"
+	                android:background="#ffff55" />
+	            <TextView
+		            android:id="@+id/totalj2"
+		            style="@style/EstiloCelda.totalRonda.landscape"
+		            android:layout_column="7" />
+	        </TableRow>
+	
+	        <TableRow style="@style/EstiloFila" >
+	            <TextView
+	                style="@style/EstiloTitulo.landscape"
+	                android:layout_column="1"
+	                android:text="@string/ronda1" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r1c1"
+	                android:layout_column="2" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r1c2"
+	                android:layout_column="3" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r1c3"
+	                android:layout_column="4" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r1c4"
+	                android:layout_column="5" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r1c5"
+	                android:layout_column="6" />
+	            <TextView
+	                android:id="@+id/j2r1"
+	                style="@style/EstiloCelda.totalRonda.landscape"
+	                android:layout_column="7" />
+	        </TableRow>
+	
+	        <TableRow style="@style/EstiloFila" >
+	            <TextView
+	                style="@style/EstiloTitulo.landscape"
+	                android:layout_column="1"
+	                android:text="@string/ronda2" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r2c1"
+	                android:layout_column="2" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r2c2"
+	                android:layout_column="3" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r2c3"
+	                android:layout_column="4" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r2c4"
+	                android:layout_column="5" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r2c5"
+	                android:layout_column="6" />
+	            <TextView
+	                android:id="@+id/j2r2"
+	                style="@style/EstiloCelda.totalRonda.landscape"
+	                android:layout_column="7" />
+	        </TableRow>
+	
+	        <TableRow style="@style/EstiloFila" >
+	            <TextView
+	                style="@style/EstiloTitulo.landscape"
+	                android:layout_column="1"
+	                android:text="@string/ronda3" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r3c1"
+	                android:layout_column="2" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r3c2"
+	                android:layout_column="3" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r3c3"
+	                android:layout_column="4" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r3c4"
+	                android:layout_column="5" />
+	            <EditText
+	                style="@style/EstiloInput"
+	                android:id="@+id/j2r3c5"
+	                android:layout_column="6" />
+	            <TextView
+	                android:id="@+id/j2r3"
+	                style="@style/EstiloCelda.totalRonda.landscape"
+	                android:layout_column="7" />
+	        </TableRow>
+	    </TableLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="10dp"
+        android:background="#aaaaaa" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textColor="#000000"
+            android:text="@string/gana" />
+
+        <TextView
+            android:id="@+id/resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="@string/empate" />
+
+        <Button android:id="@+id/calcular"
+            android:layout_marginLeft="60dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/calcular"/>
+    </LinearLayout>
+
+</LinearLayout>
