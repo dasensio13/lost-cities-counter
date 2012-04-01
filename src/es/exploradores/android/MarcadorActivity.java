@@ -1,17 +1,23 @@
 package es.exploradores.android;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class MarcadorActivity extends Activity {
 
 	private static final String TAG = "MarcadorActivity";
+
+	private static final int COSTE_EXPEDICION = 20;
+	private static final int NUM_CARTAS_BONIFICACION = 8;
+	private static final int BONIFICACION = 20;
 
 	private static final int[][][] ids = {
 								{
@@ -36,14 +42,6 @@ public class MarcadorActivity extends Activity {
     		ponerValores(valores);
     		calcularTodo();
         }
-
-        Button calcularButton = (Button) findViewById(R.id.calcular);
-        calcularButton.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				calcularTodo();
-			}
-		});
     }
 
     public void calcularTodo() {
@@ -59,8 +57,8 @@ public class MarcadorActivity extends Activity {
 				for (color=0; color<5; color++) {
 					Integer valor = valores[jugador][ronda][color];
 					if (valor!=null && valor!=0 ) {
-						EditText edit = (EditText) findViewById(getIdEdit(jugador, ronda, color));
-						edit.setText(valor.toString());
+						TextView input = (TextView) findViewById(getIdInput(jugador, ronda, color));
+						input.setText(valor.toString());
 					}
 				}
 			}
@@ -77,14 +75,14 @@ public class MarcadorActivity extends Activity {
 		for (int jugador=0; jugador<2; jugador++) {
 			for (int ronda=0; ronda<3; ronda++) {
 				for (int color=0; color<5; color++) {
-					valores[jugador][ronda][color] = getIntegerValueOfEdit(getIdEdit(jugador, ronda, color));
+					valores[jugador][ronda][color] = getIntegerValueOfText(getIdInput(jugador, ronda, color));
 				}
 			}
 		}
 		return valores;
 	}
 
-    private int getIdEdit(int jugador, int ronda, int color) {
+    private int getIdInput(int jugador, int ronda, int color) {
 		return ids[jugador][ronda][color];
 	}
 
@@ -125,20 +123,20 @@ public class MarcadorActivity extends Activity {
 	}
 
 	private void pintarGanadorJugador1() {
-		pintarGanador(R.string.jugador1);
+		pintarGanador(getResources().getText(R.string.gana) + " " + getResources().getText(R.string.jugador1));
 	}
 
 	private void pintarGanadorJugador2() {
-		pintarGanador(R.string.jugador2);
+		pintarGanador(getResources().getText(R.string.gana) + " " + getResources().getText(R.string.jugador2));
 	}
 
 	private void pintarEmpate() {
-		pintarGanador(R.string.empate);
+		pintarGanador(getResources().getText(R.string.empate).toString());
 	}
 
-	private void pintarGanador(int idTexto) {
+	private void pintarGanador(String texto) {
 		TextView ganador = (TextView)findViewById(R.id.resultado);
-		ganador.setText(idTexto);
+		ganador.setText(texto);
 	}
 
 	private int getTotalJugador1() {
@@ -150,11 +148,11 @@ public class MarcadorActivity extends Activity {
 	}
 
 	private int sumarValorColores(int id1, int id2, int id3, int id4, int id5) {
-		Integer iTotal1 = getIntegerValueOfEdit(id1);
-		Integer iTotal2 = getIntegerValueOfEdit(id2);
-		Integer iTotal3 = getIntegerValueOfEdit(id3);
-		Integer iTotal4 = getIntegerValueOfEdit(id4);
-		Integer iTotal5 = getIntegerValueOfEdit(id5);
+		Integer iTotal1 = getIntegerValueOfText(id1);
+		Integer iTotal2 = getIntegerValueOfText(id2);
+		Integer iTotal3 = getIntegerValueOfText(id3);
+		Integer iTotal4 = getIntegerValueOfText(id4);
+		Integer iTotal5 = getIntegerValueOfText(id5);
 		return iTotal1.intValue() + iTotal2.intValue() + iTotal3.intValue() + iTotal4.intValue() + iTotal5.intValue();
 	}
 
@@ -175,13 +173,81 @@ public class MarcadorActivity extends Activity {
 		}
 	}
 
-	private Integer getIntegerValueOfEdit(int id) {
-		EditText edit = (EditText)findViewById(id);
-		try {
-			return Integer.valueOf(edit.getText().toString());
-		} catch (Exception e) {
-			Log.w(TAG, "Error al obtener el valor del campo con id " + id);
-			return 0;
+	public void calcularExpedicion(final View view) {
+		Log.d(TAG, "calcularExpedicion");
+		Context mContext = getApplicationContext();
+		LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(LAYOUT_INFLATER_SERVICE);
+		View layout = inflater.inflate(R.layout.expedicion, null);
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(MarcadorActivity.this);
+		builder.setView(layout)
+			.setTitle(R.string.expedicion)
+			.setPositiveButton(R.string.aceptar,
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								int total = totalExpedicion(dialog);
+								((TextView)view).setText(String.valueOf(total));
+								calcularTodo();
+								dialog.cancel();
+							}
+						})
+				.setNegativeButton(R.string.cancelar,
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								dialog.cancel();
+							}
+						});
+		builder.create().show();
+	}
+
+	private int totalExpedicion(DialogInterface dialog) {
+		AlertDialog alertDialog = (AlertDialog) dialog;
+		CheckBox contrato1 = (CheckBox)alertDialog.findViewById(R.id.contrato1);
+		CheckBox contrato2 = (CheckBox)alertDialog.findViewById(R.id.contrato2);
+		CheckBox contrato3 = (CheckBox)alertDialog.findViewById(R.id.contrato3);
+		CheckBox carta2 = (CheckBox)alertDialog.findViewById(R.id.carta2);
+		CheckBox carta3 = (CheckBox)alertDialog.findViewById(R.id.carta3);
+		CheckBox carta4 = (CheckBox)alertDialog.findViewById(R.id.carta4);
+		CheckBox carta5 = (CheckBox)alertDialog.findViewById(R.id.carta5);
+		CheckBox carta6 = (CheckBox)alertDialog.findViewById(R.id.carta6);
+		CheckBox carta7 = (CheckBox)alertDialog.findViewById(R.id.carta7);
+		CheckBox carta8 = (CheckBox)alertDialog.findViewById(R.id.carta8);
+		CheckBox carta9 = (CheckBox)alertDialog.findViewById(R.id.carta9);
+		CheckBox carta10 = (CheckBox)alertDialog.findViewById(R.id.carta10);
+		CheckBox[] contratos = {contrato1, contrato2, contrato3};
+		CheckBox[] cartas = {contrato1, contrato2, contrato3, carta2, carta3, carta4, carta5, carta6, carta7, carta8, carta9, carta10};
+		CheckBox[] cartasPuntos = {carta2, carta3, carta4, carta5, carta6, carta7, carta8, carta9, carta10};
+		int numContratosExpedicion = getNumChecked(contratos);
+		int numCartasExpedicion = getNumChecked(cartas);
+		int totalCartas = getTotalCartas(cartasPuntos);
+		int total = calcularTotalExpedicion(numContratosExpedicion,	numCartasExpedicion, totalCartas);
+		return total;
+	}
+
+	public int calcularTotalExpedicion(int numContratosExpedicion, int numCartasExpedicion, int totalCartas) {
+		int total = totalCartas - COSTE_EXPEDICION;
+		total = total * (numContratosExpedicion+1);
+		if (numCartasExpedicion>=NUM_CARTAS_BONIFICACION) {
+			total = total + BONIFICACION;
 		}
+		return total;
+	}
+
+	private int getTotalCartas(CheckBox[] cartas) {
+		int total = 0;
+		for (int i=0; i<cartas.length; i++)
+			if (cartas[i].isChecked()) {
+				total += (i+2);
+			}
+		return total;
+	}
+
+	private int getNumChecked(CheckBox[] cartas) {
+		int total = 0;
+		for (int i=0; i<cartas.length; i++)
+			if (cartas[i].isChecked()) {
+				total++;
+			}
+		return total;
 	}
 }

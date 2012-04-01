@@ -12,4 +12,19 @@
     <string name="empate">EMPATE</string>
     <string name="total">TOTAL</string>
     <string name="valorInicial">0</string>
+
+    <string name="expedicion">Expedición</string>
+	<string name="contrato">Contrato</string>
+	<string name="carta2">2</string>
+	<string name="carta3">3</string>
+	<string name="carta4">4</string>
+	<string name="carta5">5</string>
+	<string name="carta6">6</string>
+	<string name="carta7">7</string>
+	<string name="carta8">8</string>
+	<string name="carta9">9</string>
+	<string name="carta10">10</string>
+	
+	<string name="aceptar">Aceptar</string>
+	<string name="cancelar">Cancelar</string>
 </resources>

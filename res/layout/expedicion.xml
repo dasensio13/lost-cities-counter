@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp" >
+
+    <TableRow>
+
+        <CheckBox
+            android:id="@+id/contrato1"
+            style="@style/EstiloCheckBox"
+            android:layout_column="1"
+            android:text="@string/contrato" />
+
+        <CheckBox
+            android:id="@+id/contrato2"
+            style="@style/EstiloCheckBox"
+            android:layout_column="2"
+            android:text="@string/contrato" />
+
+        <CheckBox
+            android:id="@+id/contrato3"
+            style="@style/EstiloCheckBox"
+            android:layout_column="3"
+            android:text="@string/contrato" />
+    </TableRow>
+
+    <TableRow>
+
+        <CheckBox
+            android:id="@+id/carta2"
+            style="@style/EstiloCheckBox"
+            android:layout_column="1"
+            android:text="@string/carta2" />
+
+        <CheckBox
+            android:id="@+id/carta3"
+            style="@style/EstiloCheckBox"
+            android:layout_column="2"
+            android:text="@string/carta3" />
+
+        <CheckBox
+            android:id="@+id/carta4"
+            style="@style/EstiloCheckBox"
+            android:layout_column="3"
+            android:text="@string/carta4" />
+    </TableRow>
+
+    <TableRow>
+
+        <CheckBox
+            android:id="@+id/carta5"
+            style="@style/EstiloCheckBox"
+            android:layout_column="1"
+            android:text="@string/carta5" />
+
+        <CheckBox
+            android:id="@+id/carta6"
+            style="@style/EstiloCheckBox"
+            android:layout_column="2"
+            android:text="@string/carta6" />
+
+        <CheckBox
+            android:id="@+id/carta7"
+            style="@style/EstiloCheckBox"
+            android:layout_column="3"
+            android:text="@string/carta7" />
+    </TableRow>
+
+    <TableRow>
+
+        <CheckBox
+            android:id="@+id/carta8"
+            style="@style/EstiloCheckBox"
+            android:layout_column="1"
+            android:text="@string/carta8" />
+
+        <CheckBox
+            android:id="@+id/carta9"
+            style="@style/EstiloCheckBox"
+            android:layout_column="2"
+            android:text="@string/carta9" />
+
+        <CheckBox
+            android:id="@+id/carta10"
+            style="@style/EstiloCheckBox"
+            android:layout_column="3"
+            android:text="@string/carta10" />
+    </TableRow>
+
+</TableLayout>
