@@ -225,10 +225,13 @@ public class MarcadorActivity extends Activity {
 	}
 
 	public int calcularTotalExpedicion(int numContratosExpedicion, int numCartasExpedicion, int totalCartas) {
-		int total = totalCartas - COSTE_EXPEDICION;
-		total = total * (numContratosExpedicion+1);
-		if (numCartasExpedicion>=NUM_CARTAS_BONIFICACION) {
-			total = total + BONIFICACION;
+		int total = 0;
+		if (numCartasExpedicion>0) {
+			total = totalCartas - COSTE_EXPEDICION;
+			total = total * (numContratosExpedicion+1);
+			if (numCartasExpedicion>=NUM_CARTAS_BONIFICACION) {
+				total = total + BONIFICACION;
+			}
 		}
 		return total;
 	}

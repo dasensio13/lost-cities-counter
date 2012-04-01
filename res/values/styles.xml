@@ -38,9 +38,10 @@
     </style>
 
     <style name="EstiloInput">
+        <item name="android:inputType">numberSigned</item>
         <item name="android:textSize">10sp</item>
-        <item name="android:layout_height">20dp</item>
-        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_width">25dp</item>
         <item name="android:gravity">center</item>
         <item name="android:background">#80ffffff</item>
         <item name="android:layout_margin">2dp</item>
