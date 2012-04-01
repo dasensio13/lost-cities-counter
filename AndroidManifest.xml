@@ -7,7 +7,7 @@
     <uses-sdk android:minSdkVersion="8" />
 
     <application
-        android:icon="@drawable/icon_exploradores"
+        android:icon="@drawable/icon"
         android:label="@string/app_name" >
         <activity
             android:name=".MarcadorActivity"

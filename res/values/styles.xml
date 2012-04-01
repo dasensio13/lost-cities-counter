@@ -4,7 +4,7 @@
     <style name="EstiloTabla">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/icon_exploradores</item>
+        <item name="android:background">@drawable/back</item>
     </style>
 
     <style name="EstiloTabla.landscape">
@@ -12,29 +12,23 @@
         <item name="android:layout_weight">1</item>
     </style>
 
-    <style name="EstiloFila">
-        <item name="android:padding">2dp</item>
-    </style>
-
     <style name="EstiloTitulo">
         <item name="android:padding">2dp</item>
         <item name="android:layout_marginRight">10dp</item>
-        <item name="android:text">@string/valorInicial</item>
         <item name="android:textColor">#000000</item>
+        <item name="android:maxWidth">70dp</item>
+    </style>
+
+    <style name="EstiloTitulo.jugador">
+        <item name="android:inputType">text</item>
     </style>
 
     <style name="EstiloTitulo.landscape">
         <item name="android:textSize">10sp</item>
     </style>
 
-    <style name="EstiloCelda">
-        <item name="android:padding">2dp</item>
-        <item name="android:layout_marginRight">10dp</item>
-        <item name="android:text">@string/valorInicial</item>
-        <item name="android:gravity">right</item>
-        <item name="android:layout_width">20dp</item>
-        <item name="android:layout_height">20dp</item>
-        <item name="android:textColor">#000000</item>
+    <style name="EstiloTitulo.landscape.jugador">
+        <item name="android:inputType">text</item>
     </style>
 
     <style name="EstiloInput">
@@ -48,23 +42,22 @@
         <item name="android:textColor">#000</item>
     </style>
 
-    <style name="EstiloCelda.totalRonda">
+    <style name="EstiloTotal">
+        <item name="android:padding">2dp</item>
+        <item name="android:text">@string/valorInicial</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">#000</item>
         <item name="android:layout_width">50dp</item>
         <item name="android:layout_height">25dp</item>
         <item name="android:layout_margin">2dp</item>
     </style>
 
-    <style name="EstiloCelda.totalRonda.landscape">
-        <item name="android:textSize">10sp</item>
-    </style>
-
-    <style name="EstiloCelda.totalRonda.jugador">
+    <style name="EstiloTotal.jugador">
         <item name="android:background">#80ffffff</item>
     </style>
 
-    <style name="EstiloCelda.totalRonda.jugador.landscape">
+    <style name="EstiloTotal.jugador.landscape">
         <item name="android:background">#80ffffff</item>
-        <item name="android:textSize">10sp</item>
     </style>
 
     <style name="EstiloCheckBox">

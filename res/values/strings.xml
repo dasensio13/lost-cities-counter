@@ -27,4 +27,6 @@
 	
 	<string name="aceptar">Aceptar</string>
 	<string name="cancelar">Cancelar</string>
+	<string name="nombre_titulo">Cambiar Nombre</string>
+	<string name="nombre">Nombre: </string>
 </resources>

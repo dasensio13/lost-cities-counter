@@ -3,22 +3,22 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="#ffff99"
-    android:orientation="vertical"
-    android:padding="2dp" >
+    android:orientation="vertical">
 
     <LinearLayout
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:background="#ffff99"
-	    android:orientation="horizontal"
-	    android:padding="2dp">
+	    android:orientation="horizontal">
 
 	    <TableLayout style="@style/EstiloTabla.landscape">
-	        <TableRow style="@style/EstiloFila" >
+	        <TableRow>
 	            <TextView
-	                style="@style/EstiloTitulo.landscape"
+	                android:id="@+id/jugador1"
+	                style="@style/EstiloTitulo.landscape.jugador"
 	                android:layout_column="1"
-	                android:text="@string/jugador1" />
+	                android:text="@string/jugador1"
+	                android:onClick="cambiarNombre" />
 	            <TextView
 	                style="@style/EstiloInput"
 	                android:layout_column="2"
@@ -41,11 +41,11 @@
 	                android:background="#ffff55" />
 		        <TextView
 		            android:id="@+id/totalj1"
-		            style="@style/EstiloCelda.totalRonda.jugador.landscape"
+		            style="@style/EstiloTotal.jugador.landscape"
 		            android:layout_column="7" />
 	        </TableRow>
 	
-	        <TableRow style="@style/EstiloFila" >
+	        <TableRow >
 	            <TextView
 	                style="@style/EstiloTitulo.landscape"
 	                android:layout_column="1"
@@ -77,11 +77,11 @@
                 	android:onClick="calcularExpedicion" />
 	            <TextView
 	                android:id="@+id/j1r1"
-	                style="@style/EstiloCelda.totalRonda.landscape"
+	                style="@style/EstiloTotal"
 	                android:layout_column="7" />
 	        </TableRow>
 	
-	        <TableRow style="@style/EstiloFila" >
+	        <TableRow>
 	            <TextView
 	                style="@style/EstiloTitulo.landscape"
 	                android:layout_column="1"
@@ -113,11 +113,11 @@
                 	android:onClick="calcularExpedicion" />
 	            <TextView
 	                android:id="@+id/j1r2"
-	                style="@style/EstiloCelda.totalRonda.landscape"
+	                style="@style/EstiloTotal"
 	                android:layout_column="7" />
 	        </TableRow>
 	
-	        <TableRow style="@style/EstiloFila" >
+	        <TableRow>
 	            <TextView
 	                style="@style/EstiloTitulo.landscape"
 	                android:layout_column="1"
@@ -149,22 +149,24 @@
                 	android:onClick="calcularExpedicion" />
 	            <TextView
 	                android:id="@+id/j1r3"
-	                style="@style/EstiloCelda.totalRonda.landscape"
+	                style="@style/EstiloTotal"
 	                android:layout_column="7" />
 	        </TableRow>
 	    </TableLayout>    
 
 	    <View
-	        android:layout_width="2dp"
+	        android:layout_width="1dp"
 	        android:layout_height="fill_parent"
-	        android:background="#aaaaaa" />
+	        android:background="#aaa" />
 
 	    <TableLayout style="@style/EstiloTabla.landscape" >
-	        <TableRow style="@style/EstiloFila" >
+	        <TableRow>
 	            <TextView
-	                style="@style/EstiloTitulo.landscape"
+	                android:id="@+id/jugador2"
+	                style="@style/EstiloTitulo.landscape.jugador"
 	                android:layout_column="1"
-	                android:text="@string/jugador2" />
+	                android:text="@string/jugador2"
+	                android:onClick="cambiarNombre" />
 	            <TextView
 	                style="@style/EstiloInput"
 	                android:layout_column="2"
@@ -187,11 +189,11 @@
 	                android:background="#ffff55" />
 	            <TextView
 		            android:id="@+id/totalj2"
-		            style="@style/EstiloCelda.totalRonda.jugador.landscape"
+		            style="@style/EstiloTotal.jugador.landscape"
 		            android:layout_column="7" />
 	        </TableRow>
 	
-	        <TableRow style="@style/EstiloFila" >
+	        <TableRow>
 	            <TextView
 	                style="@style/EstiloTitulo.landscape"
 	                android:layout_column="1"
@@ -223,11 +225,11 @@
                 	android:onClick="calcularExpedicion" />
 	            <TextView
 	                android:id="@+id/j2r1"
-	                style="@style/EstiloCelda.totalRonda.landscape"
+	                style="@style/EstiloTotal"
 	                android:layout_column="7" />
 	        </TableRow>
 	
-	        <TableRow style="@style/EstiloFila" >
+	        <TableRow>
 	            <TextView
 	                style="@style/EstiloTitulo.landscape"
 	                android:layout_column="1"
@@ -259,11 +261,11 @@
                 	android:onClick="calcularExpedicion" />
 	            <TextView
 	                android:id="@+id/j2r2"
-	                style="@style/EstiloCelda.totalRonda.landscape"
+	                style="@style/EstiloTotal"
 	                android:layout_column="7" />
 	        </TableRow>
 	
-	        <TableRow style="@style/EstiloFila" >
+	        <TableRow>
 	            <TextView
 	                style="@style/EstiloTitulo.landscape"
 	                android:layout_column="1"
@@ -295,7 +297,7 @@
                 	android:onClick="calcularExpedicion" />
 	            <TextView
 	                android:id="@+id/j2r3"
-	                style="@style/EstiloCelda.totalRonda.landscape"
+	                style="@style/EstiloTotal"
 	                android:layout_column="7" />
 	        </TableRow>
 	    </TableLayout>
@@ -304,9 +306,9 @@
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:layout_marginBottom="5dp"
-        android:background="#aaaaaa" />
+        android:background="#aaa" />
 
     <TextView
         android:id="@+id/resultado"

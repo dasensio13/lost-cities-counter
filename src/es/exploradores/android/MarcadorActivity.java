@@ -4,11 +4,14 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MarcadorActivity extends Activity {
@@ -18,6 +21,9 @@ public class MarcadorActivity extends Activity {
 	private static final int COSTE_EXPEDICION = 20;
 	private static final int NUM_CARTAS_BONIFICACION = 8;
 	private static final int BONIFICACION = 20;
+
+	private static final String ID_NOMBRE_JUGADOR1 = "NOMBRE_JUGADOR_1";
+	private static final String ID_NOMBRE_JUGADOR2 = "NOMBRE_JUGADOR_2";
 
 	private static final int[][][] ids = {
 								{
@@ -42,7 +48,21 @@ public class MarcadorActivity extends Activity {
     		ponerValores(valores);
     		calcularTodo();
         }
+
+        setNombres();
     }
+
+	public void setNombres() {
+		SharedPreferences settings = getPreferences(0);
+		setNombre(settings, ID_NOMBRE_JUGADOR1, R.string.jugador1, R.id.jugador1);
+		setNombre(settings, ID_NOMBRE_JUGADOR2, R.string.jugador2, R.id.jugador2);
+	}
+
+	public void setNombre(SharedPreferences settings, String idPreferences, int idDefaultText, int idView) {
+		String nombre = settings.getString(idPreferences, getResources().getString(idDefaultText));
+        TextView text = (TextView)findViewById(idView);
+        text.setText(nombre);
+	}
 
     public void calcularTodo() {
     	calcularTotalJugador1();
@@ -123,11 +143,15 @@ public class MarcadorActivity extends Activity {
 	}
 
 	private void pintarGanadorJugador1() {
-		pintarGanador(getResources().getText(R.string.gana) + " " + getResources().getText(R.string.jugador1));
+		SharedPreferences settings = getPreferences(0);
+		String nombre = settings.getString(ID_NOMBRE_JUGADOR1, getResources().getString(R.string.jugador1));
+		pintarGanador(getResources().getString(R.string.gana) + " " + nombre);
 	}
 
 	private void pintarGanadorJugador2() {
-		pintarGanador(getResources().getText(R.string.gana) + " " + getResources().getText(R.string.jugador2));
+		SharedPreferences settings = getPreferences(0);
+		String nombre = settings.getString(ID_NOMBRE_JUGADOR2, getResources().getString(R.string.jugador2));
+		pintarGanador(getResources().getString(R.string.gana) + " " + nombre);
 	}
 
 	private void pintarEmpate() {
@@ -166,9 +190,13 @@ public class MarcadorActivity extends Activity {
 	private Integer getIntegerValueOfText(int id) {
 		TextView view = (TextView)findViewById(id);
 		try {
-			return Integer.valueOf(view.getText().toString());
+			if (view.getText().toString()!=null && view.getText().toString()!="") {
+				return Integer.valueOf(view.getText().toString());
+			} else {
+				return 0;
+			}
 		} catch (Exception e) {
-			Log.w(TAG, "Error al obtener el valor del campo con id " + id);
+			Log.d(TAG, "Error al obtener el valor del campo con id " + id);
 			return 0;
 		}
 	}
@@ -252,5 +280,53 @@ public class MarcadorActivity extends Activity {
 				total++;
 			}
 		return total;
+	}
+
+	public void cambiarNombre(final View view) {
+		Log.d(TAG, "cambiarNombre");
+		Context mContext = getApplicationContext();
+		LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(LAYOUT_INFLATER_SERVICE);
+		View layout = inflater.inflate(R.layout.nombre, null);
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(MarcadorActivity.this);
+		builder.setView(layout)
+			.setTitle(R.string.nombre_titulo)
+			.setPositiveButton(R.string.aceptar,
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								saveNombre(dialog, view);
+								dialog.cancel();
+							}
+						})
+				.setNegativeButton(R.string.cancelar,
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								dialog.cancel();
+							}
+						});
+		builder.create().show();
+	}
+
+	private void saveNombre(DialogInterface dialog, View view) {
+		AlertDialog alertDialog = (AlertDialog) dialog;
+		EditText edit = (EditText)alertDialog.findViewById(R.id.nombre);
+		((TextView)view).setText(edit.getText());
+
+		int idView = view.getId();
+		switch (idView) {
+		case R.id.jugador1:
+			saveSharedNombre(ID_NOMBRE_JUGADOR1, edit.getText());
+			break;
+		case R.id.jugador2:
+			saveSharedNombre(ID_NOMBRE_JUGADOR2, edit.getText());
+			break;
+		}
+	}
+
+	private void saveSharedNombre(String idNombreShared, Editable text) {
+		SharedPreferences settings = getPreferences(0);
+		SharedPreferences.Editor editor = settings.edit();
+		editor.putString(idNombreShared, text.toString());
+		editor.commit();
 	}
 }
