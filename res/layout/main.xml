@@ -34,7 +34,7 @@
                 android:background="#ffff55" />
 	        <TextView
 	            android:id="@+id/totalj1"
-	            style="@style/EstiloCelda.totalRonda"
+	            style="@style/EstiloCelda.totalRonda.jugador"
 	            android:layout_column="7" />
         </TableRow>
 
@@ -181,7 +181,7 @@
                 android:background="#ffff55" />
             <TextView
 	            android:id="@+id/totalj2"
-	            style="@style/EstiloCelda.totalRonda"
+	            style="@style/EstiloCelda.totalRonda.jugador"
 	            android:layout_column="7" />
         </TableRow>
 
@@ -297,7 +297,7 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="2dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="5dp"
         android:background="#aaaaaa" />
     
     <TextView
@@ -306,5 +306,6 @@
         android:layout_height="wrap_content"
         android:text="@string/empate"
         android:textColor="#000000"
+        android:padding="5dp"
         android:layout_gravity="center" />
 </LinearLayout>

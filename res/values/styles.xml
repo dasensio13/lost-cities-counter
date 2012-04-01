@@ -49,10 +49,21 @@
     </style>
 
     <style name="EstiloCelda.totalRonda">
-        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_margin">2dp</item>
     </style>
 
     <style name="EstiloCelda.totalRonda.landscape">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="EstiloCelda.totalRonda.jugador">
+        <item name="android:background">#80ffffff</item>
+    </style>
+
+    <style name="EstiloCelda.totalRonda.jugador.landscape">
+        <item name="android:background">#80ffffff</item>
         <item name="android:textSize">10sp</item>
     </style>
 
