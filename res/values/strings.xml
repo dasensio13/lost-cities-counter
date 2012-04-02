@@ -1,20 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Contador Exploradores</string>
+    <string name="app_name">Lost Cities Counter</string>
 
-    <string name="jugador1">Jugador 1</string>
-    <string name="jugador2">Jugador 2</string>
-    <string name="ronda1">Ronda 1</string>
-    <string name="ronda2">Ronda 2</string>
-    <string name="ronda3">Ronda 3</string>
-    <string name="gana">Gana</string>
-    <string name="calcular">Calcular</string>
-    <string name="empate">EMPATE</string>
+    <string name="jugador1">Player 1</string>
+    <string name="jugador2">Player 2</string>
+    <string name="ronda1">Round 1</string>
+    <string name="ronda2">Round 2</string>
+    <string name="ronda3">Round 3</string>
+    <string name="gana">Winner: </string>
+    <string name="empate">TIE</string>
     <string name="total">TOTAL</string>
     <string name="valorInicial">0</string>
 
-    <string name="expedicion">Expedición</string>
-	<string name="contrato">Contrato</string>
+    <string name="expedicion">Delivery</string>
+	<string name="contrato">Invest</string>
 	<string name="carta2">2</string>
 	<string name="carta3">3</string>
 	<string name="carta4">4</string>
@@ -25,8 +23,8 @@
 	<string name="carta9">9</string>
 	<string name="carta10">10</string>
 	
-	<string name="aceptar">Aceptar</string>
-	<string name="cancelar">Cancelar</string>
-	<string name="nombre_titulo">Cambiar Nombre</string>
-	<string name="nombre">Nombre: </string>
+	<string name="aceptar">OK</string>
+	<string name="cancelar">Cancel</string>
+	<string name="nombre_titulo">Name Change</string>
+	<string name="nombre">Name: </string>
 </resources>
