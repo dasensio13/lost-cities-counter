@@ -27,4 +27,26 @@
 	<string name="cancelar">Cancel</string>
 	<string name="nombre_titulo">Name Change</string>
 	<string name="nombre">Name: </string>
+
+	<string name="creditos">Credits</string>
+	<string name="detalle_creditos">
+	    \nDeveloper: David Asensio (@dasensio13)
+	    \nGame Designer: Reiner Knizia (@ReinerKnizia)
+		\nYear Published: 1999
+		\nBGG: http://www.boardgamegeek.com/boardgame/50/lost-cities
+		\n\nVersion 0.1 - 05/04/2012
+	    \n* Beta Development phase
+	    \n* Future options:
+	    \n\t- Save Game
+	    \n\t- Change number of rounds
+	    \n\t- Better design for info and credits
+	</string>
+
+	<string name="instrucciones">About</string>
+	<string name="detalle_instrucciones">
+	    \n* Yo can change player names by selecting them.
+	    \n* You set the value of the delivery selecting it and the cards played on it.
+	    \n* Total values and winner player are updated automatically.
+	</string>
+	
 </resources>

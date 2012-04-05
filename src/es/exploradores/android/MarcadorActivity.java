@@ -1,6 +1,5 @@
 package es.exploradores.android;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,7 +13,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MarcadorActivity extends Activity {
+public class MarcadorActivity extends OptionsMenuActivity {
 
 	private static final String TAG = "MarcadorActivity";
 
