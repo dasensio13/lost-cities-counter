@@ -10,19 +10,20 @@
             android:id="@+id/contrato1"
             style="@style/EstiloCheckBox"
             android:layout_column="1"
-            android:text="@string/contrato" />
+            android:drawableRight="@drawable/contrato" />
 
         <CheckBox
             android:id="@+id/contrato2"
             style="@style/EstiloCheckBox"
             android:layout_column="2"
-            android:text="@string/contrato" />
+            android:drawableRight="@drawable/contrato" />
 
         <CheckBox
             android:id="@+id/contrato3"
             style="@style/EstiloCheckBox"
             android:layout_column="3"
-            android:text="@string/contrato" />
+            android:drawableRight="@drawable/contrato" />
+
          <CheckBox
             android:id="@+id/carta2"
             style="@style/EstiloCheckBox"
@@ -31,8 +32,6 @@
     </TableRow>
 
     <TableRow>
-
-       
 
         <CheckBox
             android:id="@+id/carta3"
@@ -51,6 +50,7 @@
             style="@style/EstiloCheckBox"
             android:layout_column="3"
             android:text="@string/carta5" />
+
         <CheckBox
             android:id="@+id/carta6"
             style="@style/EstiloCheckBox"
@@ -59,8 +59,6 @@
     </TableRow>
 
     <TableRow>
-
-        
 
         <CheckBox
             android:id="@+id/carta7"
