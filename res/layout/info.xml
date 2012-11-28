@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<TextView 
+	    android:id="@+id/TextView_HelpText"
+	    android:layout_width="match_parent" 
+	    android:layout_height="match_parent" 
+	    android:autoLink="all"
+	    android:isScrollContainer="true"
+	    android:drawablePadding="5dp"
+	    android:textColorLink="#FFFF0F"
+	    android:linksClickable="true"
+	    android:fadingEdgeLength="25dp"
+	    android:fadingEdge="vertical"
+	    android:scrollbars="vertical"
+	    android:padding="5dp"
+	    android:textSize="7pt"
+	    android:scrollbarStyle="outsideOverlay"
+	    android:bufferType="spannable"
+	    />
+</LinearLayout>

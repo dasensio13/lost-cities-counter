@@ -30,23 +30,24 @@
 
 	<string name="creditos">Credits</string>
 	<string name="detalle_creditos">
-	    \nDeveloper: David Asensio (@dasensio13)
-	    \nGame Designer: Reiner Knizia (@ReinerKnizia)
+	    \nDeveloper: David Asensio - @dasensio13
+	    \nGame Designer: Reiner Knizia - @ReinerKnizia
 		\nYear Published: 1999
 		\nBGG: http://www.boardgamegeek.com/boardgame/50/lost-cities
+		\n\nVersion 0.2 - 28/11/2012
+		\n* Better design for info and credits
 		\n\nVersion 0.1 - 05/04/2012
 	    \n* Beta Development phase
 	    \n* Future options:
 	    \n\t- Save Game
 	    \n\t- Change number of rounds
-	    \n\t- Better design for info and credits
 	</string>
 
 	<string name="instrucciones">About</string>
 	<string name="detalle_instrucciones">
 	    \n* You can change player names by selecting them.
-	    \n* You set the value of the delivery selecting it and the cards played on it.
-	    \n* Total values and winner player are updated automatically.
+	    \n\n* You set the value of the delivery selecting it and the cards played on it.
+	    \n\n* Total values and winner player are updated automatically.
 	</string>
 	
 </resources>

@@ -31,22 +31,23 @@
 
 	<string name="creditos">Créditos</string>
 	<string name="detalle_creditos">
-	    \nDesarrollador: David Asensio (@dasensio13)
-	    \nDiseñador del juego: Reiner Knizia (@ReinerKnizia)
+	    \nDesarrollador: David Asensio - @dasensio13
+	    \nDiseñador del juego: Reiner Knizia - @ReinerKnizia
 		\nAño de publicación: 1999
 		\nBGG: http://www.boardgamegeek.com/boardgame/50/lost-cities
+		\n\nVersion 0.2 - 28/11/2012
+		\n* Mejora de pantalla de créditos e info
 		\n\nVersion 0.1 - 05/04/2012
 	    \n* Desarrollo en fase beta
-	    \n* Posibilidades de futuro:
+	    \n\n* Posibilidades de futuro:
 	    \n\t- Guardar partidas
 	    \n\t- Cambio de numero de rondas
-	    \n\t- Mejora de pantalla de créditos e info
 	</string>
 
 	<string name="instrucciones">Info</string>
 	<string name="detalle_instrucciones">
 	    \n* Puedes cambiar los nombres de los jugadores seleccionandolos.
-	    \n* Para establecer el valor de una expedición deber seleccionarla y rellenar las cartas jugadas.
-	    \n* El total se actualizará automáticamente, asi como el jugador ganador.
+	    \n\n* Para establecer el valor de una expedición deber seleccionarla y rellenar las cartas jugadas.
+	    \n\n* El total se actualizará automáticamente, así como el jugador ganador.
 	</string>
 </resources>
