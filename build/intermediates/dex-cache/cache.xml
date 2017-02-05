@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\Data\Desarrollo\android\lostcitiescounter1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ce60340cca9d4c53d14b92fa3a983ae74f81ba12">
+        <dex dex="D:\Data\Desarrollo\android\lostcitiescounter1\app\build\intermediates\pre-dexed\debug\instant-run_2cc4a06e10ed2884b1914290e42720bfa665739e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Data\Desarrollo\android\lostcitiescounter1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5bbc09a574a320dc643d260bbe38b7d3616e7a8b">
+        <dex dex="D:\Data\Desarrollo\android\lostcitiescounter1\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_b9304ad77ca7dc93d80b7fd76ccf25430648f4f1.jar" />
+    </item>
+
+</items>

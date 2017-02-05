@@ -1,3 +1,2 @@
-/assets
-/bin
-/gen
+app/build
+app/app-release.apk
